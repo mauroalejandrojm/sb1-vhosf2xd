@@ -11,32 +11,32 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
               <a href="#" className="text-2xl font-bold tracking-tighter">
-                <span className="text-blue-400">Mauro</span>Jimenez
+                <span className="text-indigo-400">Mauro</span>Jimenez
               </a>
               <p className="text-slate-400 mt-2">Senior Data Engineer</p>
             </div>
-            
+
             <div className="flex space-x-6">
-              <a 
-                href="https://github.com/mauroalejandrojm" 
-                target="_blank" 
+              <a
+                href="https://github.com/mauroalejandrojm"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors"
                 aria-label="GitHub"
               >
                 <Github size={20} />
               </a>
-              <a 
-                href="https://www.linkedin.com/in/mauroalejandrojimenezmedina/" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/in/mauroalejandrojimenezmedina/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
-              <a 
-                href="mailto:mauroalejandrojm@gmail.com" 
+              <a
+                href="mailto:mauroalejandrojm@gmail.com"
                 className="text-slate-400 hover:text-white transition-colors"
                 aria-label="Email"
               >
@@ -44,14 +44,14 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          
+
           <div className="border-t border-slate-800 my-8"></div>
-          
+
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-slate-500">
               &copy; {currentYear} Mauro Jimenez. All rights reserved.
             </p>
-            
+
             <nav className="mt-4 md:mt-0">
               <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
                 <li>

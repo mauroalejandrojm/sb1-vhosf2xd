@@ -26,14 +26,13 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   ];
 
   return (
-    <header 
-      className={`fixed w-full z-40 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 dark:bg-slate-900/90 shadow-md backdrop-blur-md' : 'bg-transparent'
-      }`}
+    <header
+      className={`fixed w-full z-40 transition-all duration-300 ${scrolled ? 'bg-white/90 dark:bg-slate-900/90 shadow-md backdrop-blur-md' : 'bg-transparent'
+        }`}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" className="text-2xl font-bold tracking-tighter">
-          <span className="text-blue-600 dark:text-blue-400">Mauro</span>Jimenez
+          <span className="text-indigo-600 dark:text-indigo-400">Mauro</span>Jimenez
         </a>
 
         {/* Desktop Navigation */}
@@ -42,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             <a
               key={link.name}
               href={link.href}
-              className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+              className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
             >
               {link.name}
             </a>
@@ -67,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 py-2 transition-colors duration-200"
+                className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 py-2 transition-colors duration-200"
                 onClick={closeMenu}
               >
                 {link.name}

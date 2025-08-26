@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
       name: 'LinkedIn',
       icon: <Linkedin size={20} />,
       href: 'https://www.linkedin.com/in/mauroalejandrojimenezmedina/',
-      color: 'bg-blue-800 hover:bg-blue-900',
+      color: 'bg-indigo-800 hover:bg-indigo-900',
     },
     {
       name: 'GitHub',
@@ -75,12 +75,12 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-slate-50 dark:bg-slate-800">
+    <section id="contact" className="py-20 bg-slate-50 dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 relative inline-block">
             Get In Touch
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 dark:bg-blue-400 transform -translate-y-2"></div>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-indigo-600 dark:bg-indigo-400 transform -translate-y-2"></div>
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -111,11 +111,11 @@ const Contact: React.FC = () => {
                 <h4 className="text-lg font-semibold mb-4">Current Status</h4>
                 <p className="text-slate-700 dark:text-slate-300 mb-2 flex items-center">
                   <span className="inline-block w-3 h-3 rounded-full bg-green-500 mr-2 flex-shrink-0"></span>
-                  <span>Open to consulting opportunities</span>
+                  <span>Open to consulting opportunities.</span>
                 </p>
                 <p className="text-slate-700 dark:text-slate-300 flex items-center">
                   <span className="inline-block w-3 h-3 rounded-full bg-yellow-500 mr-2 flex-shrink-0"></span>
-                  <span>Selectively considering full-time or part-time roles</span>
+                  <span>Selectively considering full-time or part-time roles.</span>
                 </p>
               </div>
             </div>
@@ -141,7 +141,7 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all"
                   />
                 </div>
 
@@ -159,7 +159,7 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all"
                   />
                 </div>
 
@@ -177,7 +177,7 @@ const Contact: React.FC = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all"
                   />
                 </div>
 
@@ -195,18 +195,17 @@ const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-3 px-6 rounded-md text-white font-medium transition-colors duration-300 ${
-                    isSubmitting
-                      ? 'bg-blue-400 cursor-not-allowed'
-                      : 'bg-blue-600 hover:bg-blue-700'
-                  }`}
+                  className={`w-full py-3 px-6 rounded-md text-white font-medium transition-colors duration-300 ${isSubmitting
+                    ? 'bg-indigo-400 cursor-not-allowed'
+                    : 'bg-indigo-600 hover:bg-indigo-700'
+                    }`}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>

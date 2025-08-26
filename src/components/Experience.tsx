@@ -151,7 +151,7 @@ const Experience: React.FC = () => {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 relative inline-block">
             Work Experience
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 dark:bg-blue-400 transform -translate-y-2"></div>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-indigo-600 dark:bg-indigo-400 transform -translate-y-2"></div>
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -163,12 +163,12 @@ const Experience: React.FC = () => {
                     key={job.id}
                     onClick={() => setActiveIndex(index)}
                     className={`p-4 cursor-pointer transition-colors duration-300 ${activeIndex === index
-                      ? 'bg-blue-600 dark:bg-blue-500 text-white'
+                      ? 'bg-indigo-600 dark:bg-indigo-500 text-white'
                       : 'hover:bg-slate-100 dark:hover:bg-slate-700'
                       }`}
                   >
                     <h3 className="font-semibold text-lg">{job.company}</h3>
-                    <p className={activeIndex === index ? 'text-blue-100' : 'text-slate-600 dark:text-slate-400'}>
+                    <p className={activeIndex === index ? 'text-indigo-100' : 'text-slate-600 dark:text-slate-400'}>
                       {job.position}
                     </p>
                   </div>
@@ -183,7 +183,7 @@ const Experience: React.FC = () => {
                   }`}
               >
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400">{jobs[activeIndex].position}</h3>
+                  <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">{jobs[activeIndex].position}</h3>
                   <h4 className="text-xl font-semibold mb-2">{jobs[activeIndex].company}</h4>
 
                   <div className="flex flex-col sm:flex-row sm:items-center text-sm text-slate-600 dark:text-slate-400 mb-4">

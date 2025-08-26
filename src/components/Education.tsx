@@ -86,38 +86,38 @@ const Education: React.FC = () => {
   }, []);
 
   return (
-    <section 
-      id="education" 
+    <section
+      id="education"
       ref={sectionRef}
-      className="py-20 bg-white dark:bg-slate-900"
+      className="py-20 bg-white dark:bg-slate-950 opacity-100"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 relative inline-block">
             Education & Certifications
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 dark:bg-blue-400 transform -translate-y-2"></div>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-indigo-600 dark:bg-indigo-400 transform -translate-y-2"></div>
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Education */}
             <div>
               <div className="flex items-center mb-8">
-                <GraduationCap size={24} className="text-blue-600 dark:text-blue-400 mr-3" />
+                <GraduationCap size={24} className="text-indigo-600 dark:text-indigo-400 mr-3" />
                 <h3 className="text-2xl font-semibold">Education</h3>
               </div>
 
               <div className="space-y-8">
                 {education.map((edu, index) => (
-                  <div 
-                    key={index} 
-                    className={`relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-blue-600 dark:before:bg-blue-400 before:rounded-full before:z-10
+                  <div
+                    key={index}
+                    className={`relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-indigo-600 dark:before:bg-indigo-400 before:rounded-full before:z-10
                       ${index < education.length - 1 ? 'before:shadow-[0_12px_0_0_#fff,0_24px_0_0_#fff] dark:before:shadow-[0_12px_0_0_#0f172a,0_24px_0_0_#0f172a]' : ''}
                       after:content-[''] after:absolute after:left-1.5 after:top-2 after:w-[1px] after:h-full after:bg-slate-200 dark:after:bg-slate-700 after:-z-10
                       transform transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: `${isVisible ? index * 100 : 0}ms` }}
                   >
                     <div className="mb-1 flex flex-wrap justify-between items-baseline">
-                      <h4 className="text-xl font-bold text-blue-600 dark:text-blue-400">{edu.degree}</h4>
+                      <h4 className="text-xl font-bold text-indigo-600 dark:text-indigo-400">{edu.degree}</h4>
                       <span className="text-sm text-slate-600 dark:text-slate-400">{edu.period}</span>
                     </div>
                     <p className="text-base font-medium mb-2">{edu.institution}</p>
@@ -130,17 +130,16 @@ const Education: React.FC = () => {
             {/* Certifications */}
             <div>
               <div className="flex items-center mb-8">
-                <Award size={24} className="text-blue-600 dark:text-blue-400 mr-3" />
+                <Award size={24} className="text-indigo-600 dark:text-indigo-400 mr-3" />
                 <h3 className="text-2xl font-semibold">Certifications</h3>
               </div>
 
               <div className="grid gap-6">
                 {certifications.map((cert, index) => (
-                  <div 
+                  <div
                     key={index}
-                    className={`bg-slate-50 dark:bg-slate-800 rounded-lg p-5 border-l-4 border-blue-600 dark:border-blue-400 transform transition-all duration-500 ${
-                      isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-                    }`}
+                    className={`bg-slate-50 dark:bg-slate-800 rounded-lg p-5 border-l-4 border-indigo-600 dark:border-indigo-400 transform transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+                      }`}
                     style={{ transitionDelay: `${isVisible ? index * 100 : 0}ms` }}
                   >
                     <div className="flex justify-between items-start">
@@ -151,11 +150,11 @@ const Education: React.FC = () => {
                       <span className="text-sm text-slate-600 dark:text-slate-400 bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded">{cert.date}</span>
                     </div>
                     {cert.url && (
-                      <a 
-                        href={cert.url} 
-                        target="_blank" 
+                      <a
+                        href={cert.url}
+                        target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block mt-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                        className="inline-block mt-2 text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
                       >
                         View Certificate →
                       </a>
