@@ -51,26 +51,26 @@ const Contact: React.FC = () => {
       name: 'Email',
       icon: <Mail size={20} />,
       href: 'mailto:mauroalejandrojm@gmail.com',
-      color: 'bg-red-700 hover:bg-red-800',
+      color: 'bg-red-600 hover:bg-red-800',
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin size={20} />,
       href: 'https://www.linkedin.com/in/mauroalejandrojimenezmedina/',
-      color: 'bg-indigo-800 hover:bg-indigo-900',
+      color: 'bg-indigo-600 hover:bg-indigo-900',
     },
     {
       name: 'GitHub',
       icon: <Github size={20} />,
       href: 'https://github.com/mauroalejandrojm',
       color:
-        'bg-slate-800 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600',
+        'bg-slate-600 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600',
     },
     {
       name: 'Resume',
       icon: <FileText size={20} />,
       href: 'https://github.com/mauroalejandrojm/mauroalejandrojm/blob/master/pdf/resume.pdf',
-      color: 'bg-emerald-700 hover:bg-emerald-800',
+      color: 'bg-emerald-600 hover:bg-emerald-800',
     },
   ];
 
@@ -110,11 +110,11 @@ const Contact: React.FC = () => {
               <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
                 <h4 className="text-lg font-semibold mb-4">Current Status</h4>
                 <p className="text-slate-700 dark:text-slate-300 mb-2 flex items-center">
-                  <span className="inline-block w-3 h-3 rounded-full bg-green-500 mr-2 flex-shrink-0"></span>
+                  <span className="inline-block w-3 h-3 rounded-full bg-green-700 mr-2 flex-shrink-0"></span>
                   <span>Open to consulting opportunities.</span>
                 </p>
                 <p className="text-slate-700 dark:text-slate-300 flex items-center">
-                  <span className="inline-block w-3 h-3 rounded-full bg-yellow-500 mr-2 flex-shrink-0"></span>
+                  <span className="inline-block w-3 h-3 rounded-full bg-yellow-700 mr-2 flex-shrink-0"></span>
                   <span>Selectively considering full-time or part-time roles.</span>
                 </p>
               </div>

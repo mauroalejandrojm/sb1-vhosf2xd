@@ -45,9 +45,7 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mb-10 leading-relaxed">
-              I build robust data solutions that transform raw information into
-              valuable insights. With expertise in data engineering, cloud
-              technologies, and big data frameworks.
+              I develop data solutions that transform raw information into valuable insights.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
