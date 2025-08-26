@@ -51,26 +51,26 @@ const Contact: React.FC = () => {
       name: 'Email',
       icon: <Mail size={20} />,
       href: 'mailto:mauroalejandrojm@gmail.com',
-      color: 'bg-red-600 hover:bg-red-800',
+      color: 'bg-white border-2 text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700  dark:bg-slate-900 dark:hover:bg-slate-600 dark:text-white',
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin size={20} />,
       href: 'https://www.linkedin.com/in/mauroalejandrojimenezmedina/',
-      color: 'bg-indigo-600 hover:bg-indigo-900',
+      color: 'bg-white border-2 text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700  dark:bg-slate-900 dark:hover:bg-slate-600 dark:text-white',
     },
     {
       name: 'GitHub',
       icon: <Github size={20} />,
       href: 'https://github.com/mauroalejandrojm',
       color:
-        'bg-slate-600 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600',
+        'bg-white border-2  text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-600 dark:text-white',
     },
     {
       name: 'Resume',
       icon: <FileText size={20} />,
       href: 'https://github.com/mauroalejandrojm/mauroalejandrojm/blob/master/pdf/resume.pdf',
-      color: 'bg-emerald-600 hover:bg-emerald-800',
+      color: 'bg-white border-2 text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700  dark:bg-slate-900 dark:hover:bg-slate-600 dark:text-white',
     },
   ];
 
