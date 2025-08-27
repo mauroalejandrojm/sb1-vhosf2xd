@@ -51,26 +51,26 @@ const Contact: React.FC = () => {
       name: 'Email',
       icon: <Mail size={20} />,
       href: 'mailto:mauroalejandrojm@gmail.com',
-      color: 'bg-white border-2 text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700  dark:bg-slate-900 dark:hover:bg-slate-600 dark:text-white',
+      color: 'bg-white border-2 text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700  dark:bg-slate-900 dark:hover:bg-slate-600',
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin size={20} />,
       href: 'https://www.linkedin.com/in/mauroalejandrojimenezmedina/',
-      color: 'bg-white border-2 text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700  dark:bg-slate-900 dark:hover:bg-slate-600 dark:text-white',
+      color: 'bg-white border-2 text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700  dark:bg-slate-900 dark:hover:bg-slate-600',
     },
     {
       name: 'GitHub',
       icon: <Github size={20} />,
       href: 'https://github.com/mauroalejandrojm',
       color:
-        'bg-white border-2  text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-600 dark:text-white',
+        'bg-white border-2  text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-600',
     },
     {
       name: 'Resume',
       icon: <FileText size={20} />,
       href: 'https://github.com/mauroalejandrojm/mauroalejandrojm/blob/master/pdf/resume.pdf',
-      color: 'bg-white border-2 text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700  dark:bg-slate-900 dark:hover:bg-slate-600 dark:text-white',
+      color: 'bg-white border-2 text-gray-800 hover:bg-slate-100 hover:border-solid dark:border-slate-700  dark:bg-slate-900 dark:hover:bg-slate-600',
     },
   ];
 
@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${link.color} text-white flex items-center justify-center py-3 px-4 rounded-lg transition-transform duration-300 hover:scale-105 break-words text-sm sm:text-base`}
+                    className={`${link.color} dark:text-white flex items-center justify-center py-3 px-4 rounded-lg transition-transform duration-300 hover:scale-105 break-words text-sm sm:text-base`}
                   >
                     <span className="mr-2 flex-shrink-0">{link.icon}</span>
                     <span className="truncate">{link.name}</span>

@@ -25,7 +25,7 @@ const ProjectDetail: React.FC = () => {
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
                     <h2 className="text-2xl font-bold mb-4">Project not found</h2>
-                    <Link to="/" className="text-blue-600 hover:underline">
+                    <Link to="/" className="text-indigo-600 hover:underline">
                         Return to homepage
                     </Link>
                 </div>
@@ -67,7 +67,7 @@ const ProjectDetail: React.FC = () => {
                     <div className="flex items-center justify-between">
                         <Link
                             to="/"
-                            className="flex items-center text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                            className="flex items-center text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                         >
                             <ArrowLeft size={20} className="mr-2" />
                             Back to Portfolio
@@ -78,7 +78,7 @@ const ProjectDetail: React.FC = () => {
                                     href={project.links.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                                    className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -90,7 +90,7 @@ const ProjectDetail: React.FC = () => {
                                     href={project.links.live}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                                    className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -104,7 +104,7 @@ const ProjectDetail: React.FC = () => {
 
             {/* Hero Section */}
             <motion.section
-                className="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-slate-100 dark:from-slate-900 dark:to-blue-950"
+                className="pt-24 pb-16 bg-gradient-to-br from-indigo-50 to-slate-100 dark:from-slate-900 dark:to-indigo-950"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
@@ -116,7 +116,7 @@ const ProjectDetail: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                         >
-                            <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium mb-4">
+                            <span className="inline-block px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full text-sm font-medium mb-4">
                                 {project.category.replace('-', ' ').toUpperCase()}
                             </span>
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -154,8 +154,8 @@ const ProjectDetail: React.FC = () => {
                                     key={section.id}
                                     onClick={() => setActiveSection(section.id)}
                                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-colors ${activeSection === section.id
-                                            ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
-                                            : 'text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400'
+                                        ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400'
+                                        : 'text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400'
                                         }`}
                                 >
                                     <Icon size={18} />
@@ -182,7 +182,7 @@ const ProjectDetail: React.FC = () => {
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                                     <div>
                                         <h2 className="text-3xl font-bold mb-6 flex items-center">
-                                            <Target className="mr-3 text-blue-600 dark:text-blue-400" size={32} />
+                                            <Target className="mr-3 text-indigo-600 dark:text-indigo-400" size={32} />
                                             {project.situation.title}
                                         </h2>
                                         <p className="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-relaxed">
@@ -297,12 +297,12 @@ const ProjectDetail: React.FC = () => {
                                                 {project.resolution.approach.map((item, index) => (
                                                     <motion.div
                                                         key={index}
-                                                        className="flex items-start p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg"
+                                                        className="flex items-start p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg"
                                                         initial={{ opacity: 0, x: -20 }}
                                                         animate={{ opacity: 1, x: 0 }}
                                                         transition={{ delay: index * 0.1 }}
                                                     >
-                                                        <div className="w-6 h-6 bg-blue-600 dark:bg-blue-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">
+                                                        <div className="w-6 h-6 bg-indigo-600 dark:bg-indigo-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">
                                                             {index + 1}
                                                         </div>
                                                         <span className="text-slate-700 dark:text-slate-300">{item}</span>
@@ -361,7 +361,7 @@ const ProjectDetail: React.FC = () => {
                                                 {project.technicalDetails.technologies.map((tech, index) => (
                                                     <span
                                                         key={index}
-                                                        className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-xs"
+                                                        className="px-2 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded text-xs"
                                                     >
                                                         {tech}
                                                     </span>
@@ -373,7 +373,7 @@ const ProjectDetail: React.FC = () => {
                                             <ul className="space-y-1">
                                                 {project.technicalDetails.implementation.slice(0, 3).map((item, index) => (
                                                     <li key={index} className="text-slate-600 dark:text-slate-400 text-sm flex items-start">
-                                                        <span className="w-1.5 h-1.5 bg-blue-600 dark:bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                                        <span className="w-1.5 h-1.5 bg-indigo-600 dark:bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0"></span>
                                                         {item}
                                                     </li>
                                                 ))}
@@ -392,7 +392,7 @@ const ProjectDetail: React.FC = () => {
                         <div className="container mx-auto px-4">
                             <div className="max-w-4xl mx-auto">
                                 <h2 className="text-3xl font-bold mb-12 flex items-center justify-center">
-                                    <TrendingUp className="mr-3 text-blue-600 dark:text-blue-400" size={32} />
+                                    <TrendingUp className="mr-3 text-indigo-600 dark:text-indigo-400" size={32} />
                                     Project Impact
                                 </h2>
 
@@ -401,13 +401,13 @@ const ProjectDetail: React.FC = () => {
                                     {project.impact.metrics.map((metric, index) => (
                                         <motion.div
                                             key={index}
-                                            className="text-center p-8 bg-gradient-to-br from-blue-50 to-slate-50 dark:from-blue-900/20 dark:to-slate-800 rounded-lg"
+                                            className="text-center p-8 bg-gradient-to-br from-indigo-50 to-slate-50 dark:from-indigo-900/20 dark:to-slate-800 rounded-lg"
                                             initial={{ opacity: 0, y: 30 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: index * 0.2 }}
                                             whileHover={{ scale: 1.05 }}
                                         >
-                                            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                                            <div className="text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">
                                                 {metric.value}
                                             </div>
                                             <div className="text-lg font-semibold mb-2">{metric.label}</div>
@@ -421,12 +421,12 @@ const ProjectDetail: React.FC = () => {
                                 {/* Testimonial */}
                                 {project.impact.testimonial && (
                                     <motion.div
-                                        className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg border-l-4 border-blue-600 dark:border-blue-400"
+                                        className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg border-l-4 border-indigo-600 dark:border-indigo-400"
                                         initial={{ opacity: 0, scale: 0.95 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 0.6 }}
                                     >
-                                        <Quote className="w-8 h-8 text-blue-600 dark:text-blue-400 mb-4" />
+                                        <Quote className="w-8 h-8 text-indigo-600 dark:text-indigo-400 mb-4" />
                                         <blockquote className="text-lg italic text-slate-700 dark:text-slate-300 mb-4">
                                             "{project.impact.testimonial.quote}"
                                         </blockquote>
@@ -448,26 +448,26 @@ const ProjectDetail: React.FC = () => {
 
             {/* Footer CTA */}
             <motion.section
-                className="py-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white"
+                className="py-16 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
             >
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold mb-4">Interested in Similar Solutions?</h2>
-                    <p className="text-xl mb-8 text-blue-100">
+                    <p className="text-xl mb-8 text-indigo-100">
                         Let's discuss how I can help solve your data engineering challenges.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             to="/#contact"
-                            className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+                            className="px-8 py-3 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
                         >
                             Get in Touch
                         </Link>
                         <Link
                             to="/"
-                            className="px-8 py-3 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                            className="px-8 py-3 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
                         >
                             View More Projects
                         </Link>
