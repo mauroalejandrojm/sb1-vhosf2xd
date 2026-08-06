@@ -29,7 +29,7 @@ const HeroStats: React.FC = () => {
   return (
     <section className="border-t border-slate-100 bg-white dark:border-white/5 dark:bg-dark-900">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="flex flex-wrap items-end gap-y-0 gap-8 lg:justify-between">
+        <div className="flex flex-wrap items-end gap-8 lg:justify-between">
           {STATS.map((stat) => (
             <div key={stat.label} className="flex flex-col">
               <span className="text-3xl font-black text-slate-900 dark:text-white">
