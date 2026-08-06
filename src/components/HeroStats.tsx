@@ -19,7 +19,7 @@ const TICKER_ITEMS = [
 ];
 
 const STATS = [
-  { value: "6+", label: "Years Experience" },
+  { value: "7+", label: "Years Experience" },
   { value: "8+", label: "Companies Served" },
   { value: "20+", label: "Data Systems Built" },
   { value: "$4M+", label: "Cost Savings Delivered" },
