@@ -552,7 +552,7 @@ export const projectsData: ProjectData[] = [
       metrics: [
         {
           label: "Processing Speed",
-          value: "15,000 records/day",
+          value: "15,000 files/day",
           description: "Daily calls processed with automated analysis"
         },
         {
