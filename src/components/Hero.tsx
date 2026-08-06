@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
       <ParticleField />
       <GridOverlay />
       {/* Top status bar */}
-      <div className="border-slate-100 dark:border-white/5 mb-6 md:mb-8">
+      <div className="border-slate-100 dark:border-white/5 mb-10 md:mb-8">
       <div
           className={`max-w-7xl mx-auto flex items-center justify-between px-6 py-0 transition-all duration-700 ${
             isVisible ? 'opacity-100' : 'opacity-0'
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
 
         {/* Body + CTAs row */}
         <div
-          className={`grid grid-cols-1 lg:grid-cols-12 gap-8 mb-0 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          className={`grid grid-cols-1 lg:grid-cols-12 gap-8 mb-4 md:mb0 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           style={{ transitionDelay: '400ms' }}
         >
           <div className="lg:col-span-6">
