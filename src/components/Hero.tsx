@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col bg-white dark:bg-dark-900 relative overflow-hidden pt-20"
+      className="min-h-[auto] md:min-h-screen flex flex-col bg-white dark:bg-dark-900 relative overflow-hidden pt-20"
     >
       <ParticleField />
       <GridOverlay />
