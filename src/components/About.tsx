@@ -45,7 +45,7 @@ const About: React.FC = () => {
           <div className="lg:col-span-7">
             <div className="space-y-6 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
               <p>
-                I'm a Senior Data Engineer with over 6 years of experience designing, implementing, managing, and optimizing data pipelines and analytics platforms. My expertise spans logistics, psychology, robotics, and education — where I've helped organizations harness the knowledge locked in their data.
+                I'm a Senior Data Engineer with over 7 years of experience designing, implementing, managing, and optimizing data pipelines and analytics platforms. My expertise spans logistics, psychology, robotics, and education — where I've helped organizations harness the knowledge locked in their data.
               </p>
               <p>
                 I enjoy solving complex problems and building scalable infrastructure that enables data-driven decision making. My approach combines technical expertise with a deep understanding of business needs to deliver solutions that drive real value.
