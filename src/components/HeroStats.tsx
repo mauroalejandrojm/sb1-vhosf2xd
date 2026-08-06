@@ -44,7 +44,7 @@ const HeroStats: React.FC = () => {
         </div>
       </div>
 
-      <div className="border-t border-slate-100 bg-slate-50 py-3 dark:border-white/5 dark:bg-dark-800/50">
+      <div className="overflow-hidden border-t border-slate-100 bg-slate-50 py-3 dark:border-white/5 dark:bg-dark-800/50">
         <div className="flex whitespace-nowrap animate-marquee">
           {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
             <span key={i} className="flex items-center">
