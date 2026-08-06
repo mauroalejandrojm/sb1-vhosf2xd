@@ -34,7 +34,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-fit md:min-h-screen bg-white dark:bg-dark-900 text-slate-900 dark:text-white transition-colors duration-300 relative">
+      <div className="min-h-fit md:min-h-screen bg-white dark:bg-dark-900 text-slate-900 dark:text-white transition-colors duration-300 relative relative overflow-hidden">
         {/* Global grid background */}
         <div className="fixed inset-0 pointer-events-none z-0 grid-bg" />
 
