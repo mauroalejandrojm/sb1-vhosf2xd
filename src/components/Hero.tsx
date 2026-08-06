@@ -1,89 +1,125 @@
+import ParticleField from "./ParticleField";
+import GridOverlay from "./GridOverlay";
 import React, { useEffect, useState } from 'react';
-import { ArrowDown } from 'lucide-react';
-import neorones from '../assets/neurones.png';
+import { ArrowUpRight, ArrowDown, ChevronRight } from 'lucide-react';
+
+const TICKER_ITEMS = [
+  'Data Engineering', 'ETL Pipelines', 'Cloud Architecture', 'Machine Learning',
+  'Big Data', 'Azure', 'Google Cloud', 'Apache Spark', 'Python', 'PostgreSQL',
+  'Data Warehousing', 'Real-time Analytics', 'FastAPI', 'Docker', 'Kubernetes',
+];
 
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center relative overflow-hidden"
+      className="min-h-screen flex flex-col bg-white dark:bg-dark-900 relative overflow-hidden pt-20"
     >
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-white-50 to-[#000000]-950 dark:from-[#000000] dark:to-[#000000] opacity-100"></div>
-        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      <ParticleField />
+      <GridOverlay />
+      {/* Top status bar */}
+      <div className="border-slate-100 dark:border-white/5">
+      <div
+          className={`max-w-7xl mx-auto flex items-center justify-between px-6 py-0 transition-all duration-700 ${
+            isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+        <div className="flex items-center gap-2">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-500 dark:bg-teal-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500 dark:bg-teal-400"></span>
+          </span>
+          <span className="text-xs font-mono font-semibold tracking-widest uppercase text-slate-500 dark:text-slate-500">
+            System Status: Available
+          </span>
+        </div>
+        <span className="hidden sm:block text-xs font-mono text-slate-300 dark:text-slate-700 tracking-widest uppercase">
+          MAJ ── v2.0
+        </span>
+      </div>
       </div>
 
-      {/* Content */}
-      <div
-        className={`container mx-auto px-4 py-20 z-10 transform transition-transform duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-          }`}
-      >
-        {/* Make this flex so text and image align side by side */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start">
-          {/* Left content */}
-          <div className="flex-1">
-            <div className="mb-6 flex items-center">
-              <div className="w-2 h-8 bg-indigo-600 dark:bg-indigo-400 mr-3"></div>
-              <h2 className="text-xl text-slate-600 dark:text-slate-400 font-medium tracking-wide">
-                Senior Data Engineer
-              </h2>
-            </div>
+      {/* Main content */}
+      <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto px-6 py-10 w-full">
+        {/* Sub-label */}
+        <div
+          className={`mb-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          style={{ transitionDelay: '150ms' }}
+        >
+          <span className="text-xs font-mono font-semibold tracking-[0.3em] uppercase text-teal-500 dark:text-teal-400">
+            Senior Data Engineer
+          </span>
+        </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              From Chaos to Clarity,
-              <br />
-              <span className="text-indigo-600 dark:text-indigo-400">
-                Engineering data systems that just work.
-              </span>
-            </h1>
+        {/* Headline */}
+        <div
+          className={`mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+          style={{ transitionDelay: '250ms' }}
+        >
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight text-slate-900 dark:text-white max-w-5xl">
+            Architecting the infrastructure that fuels{' '}
+            <span className="text-teal-500 dark:text-teal-400">enterprise intelligence.</span>
+          </h1>
+        </div>
 
-            <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mb-10 leading-relaxed">
-              I develop data solutions that transform raw information into valuable insights.
+        {/* Body + CTAs row */}
+        <div
+          className={`grid grid-cols-1 lg:grid-cols-12 gap-8 mb-0 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          style={{ transitionDelay: '400ms' }}
+        >
+          <div className="lg:col-span-6">
+            <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed mb-8 max-w-xl">
+              From chaos to clarity — I design and operate data systems that just work.
+              Pipelines, platforms, and architecture that transform raw information into
+              measurable enterprise value.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-6 mb-0">
               <a
                 href="#contact"
-                className="px-8 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors duration-300 font-medium text-center"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-500 dark:bg-teal-400 text-white dark:text-dark-900 rounded font-semibold text-sm hover:bg-teal-600 dark:hover:bg-teal-500 transition-colors duration-200 font-mono"
               >
-                Get in Touch
+                Get in Touch <ArrowUpRight size={16} />
               </a>
               <a
                 href="#projects"
-                className="px-8 py-3 border border-slate-300 dark:border-slate-700 rounded-md hover:border-indigo-600 hover:text-indigo-600 dark:hover:border-indigo-400 dark:hover:text-indigo-400 transition-colors duration-300 font-medium text-center"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-slate-300 dark:border-white/15 text-slate-700 dark:text-slate-300 rounded font-semibold text-sm hover:border-slate-400 dark:hover:border-white/30 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
               >
-                View Projects
+                View Projects <ChevronRight size={16} />
               </a>
             </div>
           </div>
 
-          {/* Right image */}
-          <div className="hidden lg:flex flex-1 flex justify-center lg:justify-end mt-10 lg:mt-0">
-            <img
-              src={neorones}
-              alt="Right side illustration"
-              className="w-85 h-auto rounded-lg shadow-lg invert hue-rotate-180 saturate-100 dark:invert-0 dark:hue-rotate-0 dark:saturate-100"
-            />
-          </div>
         </div>
       </div>
 
-      {/* Scroll down icon */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a
-          href="#about"
-          className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+      {/* Bottom bar: coordinates + scroll hint */}
+      <div className="border-slate-100 dark:border-white/5">
+        <div
+          className={`max-w-7xl mx-auto flex items-center justify-between px-6 py-4 transition-all duration-700 ${
+            isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{ transitionDelay: '700ms' }}
         >
-          <ArrowDown size={24} />
-        </a>
+          <span className="text-xs font-mono text-slate-400 dark:text-slate-600 tracking-widest uppercase">
+            Lat 10.96° N · Lng 74.78° W
+          </span>
+      
+          <a
+            href="#projects"
+            className="flex items-center gap-2 text-xs font-mono text-slate-400 dark:text-slate-600 tracking-widest uppercase hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+          >
+            Scroll to Trace <ArrowDown size={12} />
+          </a>
+        </div>
       </div>
+      
     </section>
   );
 };

@@ -1,78 +1,80 @@
 import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 dark:bg-slate-950 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-6 md:mb-0">
-              <a href="#" className="text-2xl font-bold tracking-tighter">
-                <span className="text-indigo-400">Mauro</span>Jimenez
-              </a>
-              <p className="text-slate-400 mt-2">Senior Data Engineer</p>
-            </div>
+    <footer className="border-t border-slate-200 bg-slate-50 dark:border-white/5 dark:bg-dark-900">
+      <div className="mx-auto flex max-w-7xl flex-col px-6 py-12">
 
-            <div className="flex space-x-6">
-              <a
-                href="https://github.com/mauroalejandrojm"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-white transition-colors"
-                aria-label="GitHub"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/mauroalejandrojimenezmedina/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-white transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="mailto:mauroalejandrojm@gmail.com"
-                className="text-slate-400 hover:text-white transition-colors"
-                aria-label="Email"
-              >
-                <Mail size={20} />
-              </a>
-            </div>
+        {/* Top */}
+        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+
+          <div>
+            <a
+              href="#home"
+              className="font-mono text-sm font-semibold tracking-tight"
+            >
+              <span className="text-teal-500 dark:text-teal-400">~/</span>
+              <span className="text-slate-900 dark:text-white">
+                mauro-jimenez
+              </span>
+            </a>
+
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+              Senior Data Engineer designing scalable data platforms,
+              analytics systems, and AI-ready infrastructure.
+            </p>
           </div>
 
-          <div className="border-t border-slate-800 my-8"></div>
+          <nav className="flex flex-wrap gap-x-8 gap-y-3">
+            {[
+              { label: "/home", href: "#home" },
+              { label: "/work", href: "#projects" },
+              { label: "/process", href: "#skills" },
+              { label: "/experience", href: "#experience" },
+              { label: "/contact", href: "#contact" },
+              { label: "/chronicle", href: "/chronicle" },
+            ].map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="font-mono text-xs uppercase tracking-[0.18em] text-slate-500 transition-colors hover:text-teal-500 dark:text-slate-400 dark:hover:text-teal-400"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
 
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-slate-500">
-              &copy; {currentYear} Mauro Jimenez. All rights reserved.
+        </div>
+
+        {/* Bottom */}
+        <div className="mt-10 flex flex-col gap-4 border-t border-slate-200 pt-6 dark:border-white/5 sm:flex-row sm:items-center sm:justify-between">
+
+          <p className="font-mono text-[11px] text-slate-400 dark:text-slate-500">
+            © {currentYear} Mauro Jimenez — Built with precision, curiosity, and
+            lots of coffee.
+          </p>
+
+          <div className="flex items-center gap-6">
+
+            <p className="font-mono text-[11px] text-slate-400 dark:text-slate-500">
+              Status: operational · Available for consulting
             </p>
 
-            <nav className="mt-4 md:mt-0">
-              <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-                <li>
-                  <a href="#about" className="text-slate-400 hover:text-white transition-colors">About</a>
-                </li>
-                <li>
-                  <a href="#skills" className="text-slate-400 hover:text-white transition-colors">Skills</a>
-                </li>
-                <li>
-                  <a href="#experience" className="text-slate-400 hover:text-white transition-colors">Experience</a>
-                </li>
-                <li>
-                  <a href="#projects" className="text-slate-400 hover:text-white transition-colors">Projects</a>
-                </li>
-                <li>
-                  <a href="#contact" className="text-slate-400 hover:text-white transition-colors">Contact</a>
-                </li>
-              </ul>
-            </nav>
+            <a
+              href="#home"
+              className="inline-flex items-center gap-2 font-mono text-xs text-slate-500 transition-colors hover:text-teal-500 dark:text-slate-400 dark:hover:text-teal-400"
+            >
+              cd ~
+              <ArrowUp size={14} />
+            </a>
+
           </div>
+
         </div>
+
       </div>
     </footer>
   );

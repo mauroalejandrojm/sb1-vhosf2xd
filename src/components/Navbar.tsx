@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 interface NavbarProps {
   scrolled: boolean;
@@ -7,69 +8,87 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Education', href: '#education' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { label: '/home', href: '#home' },
+    { label: '/work', href: '#projects' },
+    { label: '/process', href: '#skills' },
+    { label: '/experience', href: '#experience' },
+    { label: '/contact', href: '#contact' },
   ];
 
   return (
     <header
-      className={`fixed w-full z-40 transition-all duration-300 ${scrolled ? 'bg-white/90 dark:bg-slate-900/90 shadow-md backdrop-blur-md' : 'bg-transparent'
-        }`}
+      className={`fixed w-full z-40 transition-all duration-500 ${
+        scrolled
+          ? 'bg-white/95 dark:bg-dark-900/95 backdrop-blur-md border-b border-slate-200 dark:border-white/5'
+          : 'bg-transparent'
+      }`}
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold tracking-tighter">
-          <span className="text-indigo-600 dark:text-indigo-400">Mauro</span>Jimenez
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo — keeps ~/ prefix */}
+        <a href="#home" className="text-sm font-mono font-semibold tracking-tight text-slate-900 dark:text-white hover:text-teal-500 dark:hover:text-teal-400 transition-colors">
+          <span className="text-teal-500 dark:text-teal-400">~/</span>mauro-jimenez
         </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
-              key={link.name}
+              key={link.label}
               href={link.href}
-              className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+              className="text-xs font-mono text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors duration-200"
             >
-              {link.name}
+              {link.label}
             </a>
           ))}
+          <a
+            href="/chronicle"
+            className="text-xs font-mono text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors duration-200"
+          >
+            /chronicle
+          </a>
+          <button
+            onClick={toggleTheme}
+            className="flex items-center justify-center w-8 h-8 text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+          </button>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-slate-700 dark:text-slate-300 focus:outline-none"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile right */}
+        <div className="md:hidden flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            className="text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
+          </button>
+          <button
+            className="text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile menu */}
       {isMenuOpen && (
-        <nav className="md:hidden bg-white dark:bg-slate-900 border-t dark:border-slate-800 py-4">
-          <div className="container mx-auto px-4 flex flex-col space-y-4">
-            {navLinks.map((link) => (
+        <nav className="md:hidden bg-white dark:bg-dark-800 border-t border-slate-200 dark:border-white/5">
+          <div className="max-w-7xl mx-auto px-6 py-3 flex flex-col">
+            {[...navLinks, { label: '/chronicle', href: '/chronicle' }].map((link) => (
               <a
-                key={link.name}
+                key={link.label}
                 href={link.href}
-                className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 py-2 transition-colors duration-200"
-                onClick={closeMenu}
+                className="text-xs font-mono text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 py-3 border-b border-slate-100 dark:border-white/5 last:border-0 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
-                {link.name}
+                {link.label}
               </a>
             ))}
           </div>
