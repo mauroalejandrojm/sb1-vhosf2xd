@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowUpRight, Clock, Calendar, Sun, Moon } from 'lucide-react';
 import { blogPosts, BlogPost } from '../data/blogPosts';
 import { useTheme } from '../context/ThemeContext';
+import SectionLabel  from '../components/SectionLabel';
 
 const ChroniclePage: React.FC = () => {
   const [activePost, setActivePost] = useState<BlogPost | null>(null);
@@ -59,18 +60,19 @@ const ChroniclePage: React.FC = () => {
 
       <main className="max-w-7xl mx-auto px-6 py-16">
         {/* Hero */}
-        <div className="mb-16 pb-16 border-slate-200 dark:border-white/5">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="text-xs font-mono font-semibold tracking-widest uppercase text-slate-400 dark:text-slate-500">// chronicle</span>
-            <span className="w-1 h-1 rounded-full bg-teal-500 dark:bg-teal-400"></span>
-            <span className="text-xs font-mono font-semibold tracking-widest uppercase text-teal-500 dark:text-teal-400">The Writing</span>
-          </div>
+        <SectionLabel
+            eyebrow="// chronicle"
+            title="The Writing"
+          />
+        <div className="max-w-4xl">
+        <div className="mb-14 pb-16 border-slate-200 dark:border-white/5">
           <h1 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white mb-6">
             The Chronicle.
           </h1>
           <p className="text-base text-slate-500 dark:text-slate-400 max-w-xl leading-relaxed">
             Thoughts on data engineering, architecture decisions, optimization strategies, and the culture of building reliable data systems at scale.
           </p>
+        </div>
         </div>
 
         {/* Featured */}

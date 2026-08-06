@@ -43,7 +43,7 @@ export interface ProjectData {
     }>;
     testimonial?: {
       quote: string;
-      author: string;
+      author?: string;
       role: string;
     };
   };
@@ -132,7 +132,6 @@ export const projectsData: ProjectData[] = [
       ],
       testimonial: {
         quote: "This optimization system transformed our port operations. The reduction in wait times and increase in throughput exceeded our expectations.",
-        author: "Maria Rodriguez",
         role: "Port Operations Manager"
       }
     }
@@ -220,7 +219,6 @@ export const projectsData: ProjectData[] = [
       ],
       testimonial: {
         quote: "The dynamic pricing engine revolutionized our revenue management. We can now respond to market changes in real-time while maintaining profitability.",
-        author: "James Chen",
         role: "Revenue Operations Director"
       }
     }
@@ -307,7 +305,6 @@ export const projectsData: ProjectData[] = [
       ],
       testimonial: {
         quote: "The fleet optimization system transformed our operations. We're now running more efficiently while improving driver satisfaction.",
-        author: "Sarah Johnson",
         role: "Fleet Operations Manager"
       }
     }
@@ -394,7 +391,6 @@ export const projectsData: ProjectData[] = [
       ],
       testimonial: {
         quote: "The data optimization and recommendation system completely transformed our platform. Users can now find relevant loads instantly.",
-        author: "Michael Torres",
         role: "Product Engineering Lead"
       }
     }
@@ -481,7 +477,6 @@ export const projectsData: ProjectData[] = [
       ],
       testimonial: {
         quote: "The new dashboard gives us complete visibility into our operations. Finding trucks and containers is now effortless.",
-        author: "Lisa Wang",
         role: "Logistics Coordinator"
       }
     }
@@ -568,7 +563,6 @@ export const projectsData: ProjectData[] = [
       ],
       testimonial: {
         quote: "This solution transformed our compliance monitoring. We now have complete visibility into all customer interactions with unprecedented accuracy.",
-        author: "David Kim",
         role: "Compliance Director"
       }
     }

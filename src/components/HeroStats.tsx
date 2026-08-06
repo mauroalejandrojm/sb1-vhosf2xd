@@ -45,20 +45,29 @@ const HeroStats: React.FC = () => {
       </div>
 
       <div className="overflow-hidden border-t border-slate-100 bg-slate-50 py-3 dark:border-white/5 dark:bg-dark-800/50">
-        <div className="flex whitespace-nowrap animate-marquee">
-          {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
-            <span key={i} className="flex items-center">
-              <span className="px-6 text-xs font-mono uppercase tracking-widest text-slate-300 dark:text-slate-700">
-                {item}
-              </span>
+        <div className="flex w-max animate-marquee">
+          {[0, 1].map((copy) => (
+            <div
+              key={copy}
+              className="flex shrink-0 whitespace-nowrap"
+              aria-hidden={copy === 1}
+            >
+              {TICKER_ITEMS.map((item) => (
+                <span key={`${copy}-${item}`} className="flex shrink-0 items-center">
+                  <span className="px-6 text-xs font-mono uppercase tracking-widest text-slate-300 dark:text-slate-700">
+                    {item}
+                  </span>
 
-              <span className="text-teal-500/20 dark:text-teal-400/20">
-                ·
-              </span>
-            </span>
+                  <span className="text-teal-500/20 dark:text-teal-400/20">
+                    ·
+                  </span>
+                </span>
+              ))}
+            </div>
           ))}
         </div>
       </div>
+
     </section>
   );
 };

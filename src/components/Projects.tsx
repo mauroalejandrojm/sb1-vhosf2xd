@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight} from 'lucide-react';
 import { projectsData } from '../data/projectsData';
 
 const Projects: React.FC = () => {
@@ -84,9 +84,18 @@ const Projects: React.FC = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                      className="w-full h-full object-cover
+                                  opacity-70
+                                  transition-transform transition-opacity duration-500
+                                  group-hover:scale-105
+                                  group-hover:opacity-100
+                                  group-hover:-translate-y-2
+                                  transform-gpu
+                                  will-change-transform
+                                  backface-hidden"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 dark:from-dark-900 via-transparent to-transparent"></div>
+                    <div className="absolute inset-x-0 -bottom-0 h-24 bg-gradient-to-t from-slate-900/50 dark:from-dark-900 via-transparent to-transparent">
+                    </div>
                     <div className="absolute top-4 left-4">
                       <span className="px-2.5 py-1 bg-white/80 dark:bg-dark-900/80 backdrop-blur-sm text-teal-600 dark:text-teal-400 rounded text-xs font-semibold tracking-wide uppercase">
                         {project.category.replace('-', ' ')}

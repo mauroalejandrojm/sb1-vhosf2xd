@@ -3,8 +3,12 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowUpRight, Target, AlertTriangle, CheckCircle, TrendingUp, Quote } from 'lucide-react';
 import { projectsData, ProjectData } from '../data/projectsData';
+import SectionLabel  from '../components/SectionLabel';
+import { Sun, Moon } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 const ProjectDetail: React.FC = () => {
+  const { theme, toggleTheme } = useTheme();
   const { id } = useParams<{ id: string }>();
   const [project, setProject] = useState<ProjectData | null>(null);
   const [activeSection, setActiveSection] = useState('situation');
@@ -53,32 +57,60 @@ const ProjectDetail: React.FC = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-dark-900">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-dark-900/95 backdrop-blur-md border-b border-slate-200 dark:border-white/5">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center text-slate-600 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors text-sm">
-              <ArrowLeft size={18} className="mr-2" />
-              Back to Portfolio
+      <header className="sticky top-0 z-40 bg-white/95 dark:bg-dark-900/95 backdrop-blur-md border-b border-slate-200 dark:border-white/5">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-6">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-xs font-mono text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+            >
+              <ArrowLeft size={15} />
+              ~/mauro-jimenez
             </Link>
-            <div className="flex space-x-6">
-              {project.links.github && (
-                <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors">
-                  <ArrowUpRight size={18} />
-                </a>
-              )}
-              {project.links.live && (
-                <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors">
-                  <ArrowUpRight size={18} />
-                </a>
-              )}
-            </div>
+
+            <span className="text-slate-200 dark:text-white/10">/</span>
+
+            <span className="text-xs font-mono text-slate-400 dark:text-slate-500">
+              {project.title}
+            </span>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <span className="hidden sm:flex items-center gap-1.5">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-teal-500" />
+              </span>
+
+              <span className="text-xs font-mono text-slate-400 dark:text-slate-500 tracking-widest uppercase">
+                Case Study
+              </span>
+            </span>
+
+            {project.links.github && (
+              <a
+                href={project.links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+              >
+                <ArrowUpRight size={15} />
+              </a>
+            )}
+
+            <button
+              onClick={toggleTheme}
+              className="flex items-center justify-center w-8 h-8 text-slate-500 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+            >
+              {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+            </button>
           </div>
         </div>
-      </nav>
+      </header>
 
       {/* Hero */}
       <motion.section
-        className="pt-32 pb-16 bg-slate-50 dark:bg-dark-800"
+        className="pt-20 pb-16 bg-slate-50 dark:bg-dark-800"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -90,11 +122,11 @@ const ProjectDetail: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="flex items-center gap-3 mb-6">
-                <span className="section-label font-mono">// case_study</span>
-                <span className="w-1 h-1 rounded-full bg-teal-500 dark:bg-teal-400"></span>
-                <span className="section-label text-teal-500 dark:text-teal-400 font-mono">{project.category.replace('-', ' ').toUpperCase()}</span>
-              </div>
+              <SectionLabel
+                  eyebrow="// case_study"
+                  title={project.category.replace('-', ' ').toUpperCase()}
+                  fullBleed
+              />
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-[1.05] tracking-tight text-slate-900 dark:text-white">
                 {project.title}
               </h1>
@@ -349,7 +381,6 @@ const ProjectDetail: React.FC = () => {
                       "{project.impact.testimonial.quote}"
                     </blockquote>
                     <div>
-                      <div className="font-semibold text-slate-900 dark:text-white text-sm">{project.impact.testimonial.author}</div>
                       <div className="text-xs text-slate-500 dark:text-slate-500">{project.impact.testimonial.role}</div>
                     </div>
                   </motion.div>
@@ -382,7 +413,19 @@ const ProjectDetail: React.FC = () => {
           </div>
         </div>
       </motion.section>
+      {/* Footer */}
+      <footer className="border-t border-slate-200 dark:border-white/5 py-8 mt-8">
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+          <span className="text-xs font-mono text-slate-400 dark:text-slate-600">
+            &copy; {new Date().getFullYear()} mauro-jimenez
+          </span>
+          <Link to="/" className="flex items-center gap-2 text-xs font-mono text-slate-400 dark:text-slate-600 hover:text-teal-500 dark:hover:text-teal-400 transition-colors">
+            <ArrowLeft size={13} /> back to portfolio
+          </Link>
+        </div>
+      </footer>
     </div>
+    
   );
 };
 
