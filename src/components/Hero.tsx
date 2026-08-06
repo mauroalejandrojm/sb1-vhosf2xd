@@ -100,7 +100,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Bottom bar: coordinates + scroll hint */}
-      <div className="border-slate-100 dark:border-white/5 mt-4 md:mt-0">
+      <div className="border-slate-100 dark:border-white/5 mt-0 md:mt-0">
         <div
           className={`max-w-7xl mx-auto flex items-center justify-between px-6 py-4 transition-all duration-700 ${
             isVisible ? 'opacity-100' : 'opacity-0'
