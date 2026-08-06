@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Main content */}
-      <div className="flex-none md:flex-1 flex flex-col justify-start md:justify-center max-w-7xl mx-auto px-6 py-10 w-full">
+      <div className="flex-none md:flex-1 flex flex-col justify-center md:justify-center max-w-7xl mx-auto px-6 py-10 w-full">
         {/* Sub-label */}
         <div
           className={`mb-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
