@@ -108,6 +108,24 @@ body {
   }
 }
 
+.hidden-h1 {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.hidden-h2 {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .animate-fade-up {
   animation: fadeUp 0.7s ease-out forwards;
 }

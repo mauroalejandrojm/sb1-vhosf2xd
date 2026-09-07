@@ -63,10 +63,17 @@ const Hero: React.FC = () => {
           className={`mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
           style={{ transitionDelay: '250ms' }}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight text-slate-900 dark:text-white max-w-5xl">
+          <h1 className="hidden-h1">
+            Mauro Jimenez
+          </h1>
+          <h2 className="hidden-h2">
+            Senior Data Engineer specializing in Python, SQL, Google Cloud,
+            Snowflake, Azure and scalable data platforms.
+          </h2>
+          <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight text-slate-900 dark:text-white max-w-5xl">
             Architecting the infrastructure that fuels{' '}
             <span className="text-teal-500 dark:text-teal-400">enterprise intelligence.</span>
-          </h1>
+          </p>
         </div>
 
         {/* Body + CTAs row */}
