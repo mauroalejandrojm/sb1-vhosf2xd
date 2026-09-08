@@ -54,7 +54,7 @@ export const projectsData: ProjectData[] = [
     id: 1,
     title: "Container Handling Optimization for Trucks",
     description: "Led end-to-end project management for port operations optimization initiatives by deploying machine learning algorithms, improving efficiency across key workflows and reducing operational bottlenecks.",
-    image: "https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg",
+    image: "/images/pexels-photo-1427107.webp",
     tags: ["fastapi", "pytorch", "logfire", "Azure", "Python", "opentelemetry"],
     links: {
       github: "",
@@ -68,7 +68,7 @@ export const projectsData: ProjectData[] = [
         "Container throughput: 150 containers/hour",
         "Operational efficiency: 65%"
       ],
-      image: "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg"
+      image: "/images/pexels-photo-906494.webp"
     },
     complication: {
       title: "Complex Operational Constraints",
@@ -80,7 +80,7 @@ export const projectsData: ProjectData[] = [
         "Legacy systems with limited integration capabilities",
         "Varying truck specifications and handling requirements"
       ],
-      image: "https://images.pexels.com/photos/2226458/pexels-photo-2226458.jpeg"
+      image: "/images/pexels-photo-2226458.webp"
     },
     resolution: {
       title: "AI-Powered Optimization Engine",
@@ -99,7 +99,7 @@ export const projectsData: ProjectData[] = [
         "Decreased fuel consumption by 25%",
         "Enhanced customer satisfaction scores by 35%"
       ],
-      image: "https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg"
+      image: "/images/pexels-photo-1427107.webp"
     },
     technicalDetails: {
       architecture: "Microservices architecture deployed on Azure with real-time data processing pipelines, machine learning inference engines, and comprehensive monitoring systems.",
@@ -140,7 +140,7 @@ export const projectsData: ProjectData[] = [
     id: 2,
     title: "Dynamic Pricing Engine",
     description: "Designed and implemented container imports fare class and capacity system with a scalable architecture for dynamic prices, including algorithms for fare protection levels, a high-level architecture, and a common evaluation framework.",
-    image: "https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg",
+    image: "/images/pexels-photo-186461.webp",
     tags: ["Azure", "fastapi", "pydantic", "postgresql", "azure container registry", "forecasting"],
     links: {
       github: "",
@@ -155,7 +155,7 @@ export const projectsData: ProjectData[] = [
         "Capacity utilization: 70%",
         "Price adjustment frequency: Weekly"
       ],
-      image: "https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg"
+      image: "https://images.pexels.com/photos/259200/pexels-photo-259200.webp"
     },
     complication: {
       title: "Market Complexity and Competition",
@@ -167,7 +167,7 @@ export const projectsData: ProjectData[] = [
         "Customer price sensitivity and retention considerations",
         "Regulatory compliance across different markets"
       ],
-      image: "https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg"
+      image: "https://images.pexels.com/photos/590041/pexels-photo-590041.webp"
     },
     resolution: {
       title: "Intelligent Pricing Ecosystem",
@@ -186,7 +186,7 @@ export const projectsData: ProjectData[] = [
         "Enhanced customer satisfaction through fair pricing",
         "Achieved 99.9% system uptime for pricing services"
       ],
-      image: "https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg"
+      image: "/images/pexels-photo-186461.webp"
     },
     technicalDetails: {
       architecture: "Event-driven microservices architecture on Azure with real-time data streaming, ML inference pipelines, and high-availability pricing APIs.",
@@ -227,7 +227,7 @@ export const projectsData: ProjectData[] = [
     id: 3,
     title: "Fleet Management System",
     description: "Developed a fleet management system leveraging a constraint-based geospatial algorithm using a state machine optimizing trucking operation, reducing driver utilization by 5%, deadhead miles by 27%, and non-revenue hours by 44%.",
-    image: "https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg",
+    image: "/images/pexels-photo-2199293.webp",
     tags: ["python", "scikit-learn", "docker", "finite-state machine", "time-series"],
     links: {
       github: ""
@@ -241,7 +241,7 @@ export const projectsData: ProjectData[] = [
         "Driver utilization: 68%",
         "Non-revenue hours: 40% of total hours"
       ],
-      image: "https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg"
+      image: "/images/pexels-photo-1427541.webp"
     },
     complication: {
       title: "Multi-Constraint Optimization Challenge",
@@ -253,7 +253,7 @@ export const projectsData: ProjectData[] = [
         "Customer delivery time windows and preferences",
         "Fuel costs and environmental impact considerations"
       ],
-      image: "https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg"
+      image: "/images/pexels-photo-1427107.webp"
     },
     resolution: {
       title: "AI-Driven Fleet Optimization",
@@ -272,7 +272,7 @@ export const projectsData: ProjectData[] = [
         "Improved on-time delivery rate to 96%",
         "Reduced fuel consumption by 18%"
       ],
-      image: "https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg"
+      image: "/images/pexels-photo-2199293.webp"
     },
     technicalDetails: {
       architecture: "Containerized microservices with real-time data processing, state management, and optimization engines deployed on cloud infrastructure.",
@@ -313,7 +313,7 @@ export const projectsData: ProjectData[] = [
     id: 4,
     title: "Big Data Pipelines and Reports for Load Board Networks",
     description: "ETL pipeline for clustering geospatial data of shipments to map layers optimizing data storage by 98% to improve customer experience. Designed and deployed a recommendation model for matching shipment preferences.",
-    image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg",
+    image: "/images/pexels-photo-590022.webp",
     tags: ["Tableau", "SQL", "Data Modeling", "ETL", "Python"],
     links: {
       live: ""
@@ -327,7 +327,7 @@ export const projectsData: ProjectData[] = [
         "Data storage costs: $45K/month",
         "Average search time: 12 seconds"
       ],
-      image: "https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg"
+      image: "/images/pexels-photo-1427107.webp"
     },
     complication: {
       title: "Scale and Performance Challenges",
@@ -339,7 +339,7 @@ export const projectsData: ProjectData[] = [
         "Complex user preferences and matching criteria",
         "Integration with multiple data sources and formats"
       ],
-      image: "https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg"
+      image: "/images/pexels-photo-590041.webp"
     },
     resolution: {
       title: "Intelligent Data Architecture",
@@ -358,7 +358,7 @@ export const projectsData: ProjectData[] = [
         "Decreased infrastructure costs by 85%",
         "Enhanced user engagement by 60%"
       ],
-      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg"
+      image: "/images/pexels-photo-590022.webp"
     },
     technicalDetails: {
       architecture: "Distributed data processing platform with real-time ETL pipelines, ML recommendation engines, and interactive visualization layers.",
@@ -399,7 +399,7 @@ export const projectsData: ProjectData[] = [
     id: 5,
     title: "Interactive Dashboard for Customers",
     description: "Developed a truck and container search system using filters based on available and customizable features with an average response of 600ms with monitoring and alerting capabilities.",
-    image: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg",
+    image: "/images/pexels-photo-669615.webp",
     tags: ["Python", "Apache Airflow", "PostgreSQL", "Docker", "CI/CD"],
     links: {
       github: ""
@@ -413,7 +413,7 @@ export const projectsData: ProjectData[] = [
         "Search completion rate: 45%",
         "Support ticket volume: 150/day"
       ],
-      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg"
+      image: "/images/pexels-photo-590022.webp"
     },
     complication: {
       title: "Complex Search and Filtering Requirements",
@@ -425,7 +425,7 @@ export const projectsData: ProjectData[] = [
         "High-performance search with large datasets",
         "Mobile-responsive design for field operations"
       ],
-      image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg"
+      image: "/images/pexels-photo-1181671.webp"
     },
     resolution: {
       title: "Comprehensive Customer Portal",
@@ -444,7 +444,7 @@ export const projectsData: ProjectData[] = [
         "Improved search completion rate to 87%",
         "Enhanced user engagement by 120%"
       ],
-      image: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg"
+      image: "/images/pexels-photo-669615.webp"
     },
     technicalDetails: {
       architecture: "Modern web application with microservices backend, real-time data processing, and responsive frontend deployed with CI/CD automation.",
@@ -485,7 +485,7 @@ export const projectsData: ProjectData[] = [
     id: 6,
     title: "Cloud Data Solution",
     description: "ELT pipelines for processing call audio files recorded for credit institutions or financial companies with support for over 10 FFmpeg codecs. Sensitive reports and analytics for users.",
-    image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+    image: "/images/pexels-photo-1181671.webp",
     tags: ["Pytorch", "keras", "google cloud", "Python", "signal processing"],
     links: {
       github: ""
@@ -499,7 +499,7 @@ export const projectsData: ProjectData[] = [
         "Manual review time: 8 hours per call",
         "Compliance coverage: 12%"
       ],
-      image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg"
+      image: "/images/pexels-photo-1181671.webp"
     },
     complication: {
       title: "Audio Processing and Compliance Complexity",
@@ -511,7 +511,7 @@ export const projectsData: ProjectData[] = [
         "Natural language processing for sentiment and compliance analysis",
         "Scalable cloud infrastructure for varying workloads"
       ],
-      image: "https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg"
+      image: "/images/pexels-photo-590041.webp"
     },
     resolution: {
       title: "AI-Powered Audio Analytics Platform",
@@ -530,7 +530,7 @@ export const projectsData: ProjectData[] = [
         "Enhanced service quality scores by 20%",
         "Achieved 99.9% system uptime and reliability"
       ],
-      image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg"
+      image: "/images/pexels-photo-1181671.webp"
     },
     technicalDetails: {
       architecture: "Serverless cloud architecture with automated scaling, secure data processing, and real-time analytics capabilities on Google Cloud Platform.",

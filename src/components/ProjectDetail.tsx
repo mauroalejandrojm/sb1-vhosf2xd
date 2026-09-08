@@ -203,7 +203,7 @@ const ProjectDetail: React.FC = () => {
                 </div>
                 {project.situation.image && (
                   <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
-                    <img src={project.situation.image} alt="Situation" className="w-full h-80 object-cover rounded-lg" />
+                    <img src={project.situation.image} alt="Situation" className="w-full h-80 object-cover rounded-lg" loading="lazy" decoding="async" />
                   </motion.div>
                 )}
               </div>
@@ -218,7 +218,7 @@ const ProjectDetail: React.FC = () => {
               <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {project.complication.image && (
                   <motion.div className="order-2 lg:order-1" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
-                    <img src={project.complication.image} alt="Complication" className="w-full h-80 object-cover rounded-lg" />
+                    <img src={project.complication.image} alt="Complication" className="w-full h-80 object-cover rounded-lg" loading="lazy" decoding="async"/>
                   </motion.div>
                 )}
                 <div className="order-1 lg:order-2">
@@ -303,7 +303,7 @@ const ProjectDetail: React.FC = () => {
                   </div>
                   {project.resolution.image && (
                     <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
-                      <img src={project.resolution.image} alt="Resolution" className="w-full h-80 object-cover rounded-lg" />
+                      <img src={project.resolution.image} alt="Resolution" className="w-full h-80 object-cover rounded-lg" loading="lazy" decoding="async" />
                     </motion.div>
                   )}
                 </div>

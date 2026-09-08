@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
       {/* Top status bar */}
       <div className="border-slate-100 dark:border-white/5 mb-10 md:mb-8">
       <div
-          className={`max-w-7xl mx-auto flex items-center justify-between px-6 py-0 transition-all duration-700 ${
+          className={`max-w-7xl mx-auto flex items-center justify-between px-6 py-0 ${
             isVisible ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -50,8 +50,7 @@ const Hero: React.FC = () => {
       <div className="flex-none md:flex-1 flex flex-col justify-center md:justify-center max-w-7xl mx-auto px-6 py-10 w-full">
         {/* Sub-label */}
         <div
-          className={`mb-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          style={{ transitionDelay: '150ms' }}
+          className={`mb-6 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
           <span className="text-xs font-mono font-semibold tracking-[0.3em] uppercase text-teal-500 dark:text-teal-400">
             Senior Data Engineer
@@ -59,27 +58,16 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Headline */}
-        <div
-          className={`mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-          style={{ transitionDelay: '250ms' }}
-        >
-          <h1 className="hidden-h1">
-            Mauro Jimenez
-          </h1>
-          <h2 className="hidden-h2">
-            Senior Data Engineer specializing in Python, SQL, Google Cloud,
-            Snowflake, Azure and scalable data platforms.
-          </h2>
-          <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight text-slate-900 dark:text-white max-w-5xl">
-            Architecting the infrastructure that fuels{' '}
-            <span className="text-teal-500 dark:text-teal-400">enterprise intelligence.</span>
-          </p>
-        </div>
+        <h1 className="mb-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight text-slate-900 dark:text-white max-w-5xl">
+          Architecting the infrastructure that fuels{' '}
+          <span className="text-teal-500 dark:text-teal-400">
+            enterprise intelligence.
+          </span>
+        </h1>
 
         {/* Body + CTAs row */}
         <div
-          className={`grid grid-cols-1 lg:grid-cols-12 gap-8 mb-4 md:mb0 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          style={{ transitionDelay: '400ms' }}
+          className={`grid grid-cols-1 lg:grid-cols-12 gap-8 mb-4 md:mb0 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
           <div className="lg:col-span-6">
             <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed mb-8 max-w-xl">
@@ -109,10 +97,9 @@ const Hero: React.FC = () => {
       {/* Bottom bar: coordinates + scroll hint */}
       <div className="border-slate-100 dark:border-white/5 mt-10 md:mt-0">
         <div
-          className={`max-w-7xl mx-auto flex items-center justify-between px-6 py-4 transition-all duration-700 ${
+          className={`max-w-7xl mx-auto flex items-center justify-between px-6 py-4 ${
             isVisible ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ transitionDelay: '700ms' }}
         >
           <span className="text-xs font-mono text-slate-400 dark:text-slate-600 tracking-widest uppercase">
             Lat 10.96° N · Lng 74.78° W

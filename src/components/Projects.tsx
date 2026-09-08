@@ -84,6 +84,8 @@ const Projects: React.FC = () => {
                     <img
                       src={project.image}
                       alt={project.title}
+                      width="768"
+                      height="512"
                       className="w-full h-full object-cover
                                   opacity-70
                                   transition-transform transition-opacity duration-500
@@ -93,6 +95,8 @@ const Projects: React.FC = () => {
                                   transform-gpu
                                   will-change-transform
                                   backface-hidden"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-x-0 -bottom-0 h-24 bg-gradient-to-t from-slate-900/50 dark:from-dark-900 via-transparent to-transparent">
                     </div>

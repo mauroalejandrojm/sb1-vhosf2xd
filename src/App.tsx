@@ -12,6 +12,7 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ChroniclePage from './pages/ChroniclePage';
+import NotFound from './pages/NotFound';
 import { ThemeProvider } from './context/ThemeContext';
 import PipelineTrace from "./components/PipelineTrace";
 
@@ -59,6 +60,7 @@ function App() {
                 <Footer />
               </>
             } />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>
