@@ -58,7 +58,7 @@ const contactLinks: ContactLink[] = [
     name: 'Resume',
     value: 'Professional experience · PDF',
     description: 'View my background and experience',
-    href: 'https://github.com/mauroalejandrojm/mauroalejandrojm/blob/master/pdf/resume.pdf',
+    href: 'https://github.com/mauroalejandrojm/mauroalejandrojm/blob/master/pdf/mauro_jimenez_resume.pdf',
     icon: FileText,
     external: true,
   },
